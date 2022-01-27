@@ -1,0 +1,230 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Berkshire+Swash&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Berkshire+Swash&family=Oleo+Script&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Berkshire+Swash&family=Oleo+Script&family=Roboto+Slab:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sedgwick+Ave&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@1,700&display=swap');
+
+/* 
+    CS-341 Homework 1
+    Author: Devam Patel
+    Date: 1/20/2022
+
+    Cheesecake Order Form Webpage (CSS File)
+*/
+body { /* Primary body of the cheesecake form*/
+    margin-top: -15px;
+    background-color: lightskyblue;
+    
+}
+
+#mainHeader { /*Title of the cheesecake form*/
+    font-family: 'Berkshire Swash', cursive;
+    color: black;
+    font-size: 35px;
+    text-align: center;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.mainClass { /*This section contains the cheesecake image and its styles*/
+    margin-top: 20px;
+    border: 3px solid black;
+    width: 400px;
+    background-image: url(https://www.xmple.com/wallpaper/gradient-red-linear-1920x1080-c2-ffa07a-f08080-a-240-f-14.svg);
+    margin-bottom: 40px;
+    margin-left: 5px;
+    height: 700px;
+}
+
+.postOrder { /*div which is executed after the order button is clicked*/
+    margin-top: 20px;
+}
+
+table { 
+    color:black
+}
+
+label { /*formatting for all of the labels in the html file*/
+    font-family: cursive;
+    margin-left: 50px;
+    
+}
+ 
+input[type="radio"] { /*format the radio buttons and their margins*/
+    margin-right: -45px;
+    margin-left: 10px;
+}
+
+#ToppingsLabel { /*add new font for the topping label and adjust its margins*/
+    font-family: 'Roboto Slab', serif;
+    font-style: italic;
+    margin-left: 10px;
+    font-size: 18px;
+}
+
+#quantityID { /*add new font for the quantity label and adjust its margins*/
+    font-family: 'Roboto Slab', serif;
+    font-style: italic;
+    margin-left: 60px;
+    font-size: 18px;
+}
+
+#notesLabel { /*change font for the customer notes*/
+    font-family: 'Roboto Slab', serif;
+    margin-left: 5px;
+}
+
+
+.chooseToppings { /*custom font for each of the topping choices*/
+    font-family: 'Roboto Slab', serif;
+    font-style: italic;
+    font-size: 15px;
+}
+
+img { /*format the cheesecake image*/
+    border: 3px solid black;
+    color: blue;
+    margin-left: 60px;
+}
+
+select { /*adjust the margin of the quantity selector*/
+    margin-left: 75px;
+    margin-bottom: 30px;
+  
+}
+
+#orderSummary{ /*post order summary which is displayed to the customer after order is palced*/
+    margin-left: 5px;
+    text-align: center;
+    padding-left: 100px;
+    font-family: 'Roboto Slab', serif;
+}
+
+#list{ /*List of total order placed on a given month*/
+    margin-left: 5px;
+    text-align: center;
+    padding-left: 60px;
+    font-family: 'Roboto Slab', serif;
+    font-size: 12px;
+}
+
+#postNotesContent { /*Display the notes that were added by the customers, format font and margin levels*/
+    margin-left: 5px;
+    text-align: center;
+    padding-left: 15px;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    padding-top: 8px;
+    font-size: 12px;
+}
+
+#postNotesTitle {
+    margin-left: 5px;
+    text-align: center;
+    padding-left: 5;
+    font-family: 'Roboto Slab', serif;
+    padding-top: 8px;
+    font-size: 15px;
+}
+
+#thankyouNote{ /*format and style the thank you note for the customer in the post order screen*/
+    margin-left: 30px;
+    font-family: 'Sedgwick Ave', cursive;
+    font-style: italic;
+    font-size: 20px;
+    text-align: center;
+
+}
+
+/*Below are simple margin adjustments for each of the elements in the post order screen*/
+#orderButton { 
+    margin-top: -30px;
+    margin-left: 5px;
+}
+
+#totalOrders {
+    margin-left: 5px;
+    font-family: 'Roboto Slab', serif;
+    margin-top: -30px;
+}
+
+#myList{
+    margin-top: -10px;
+    font-family: 'Roboto Slab', serif;
+    font-style: normal;
+}
+
+#textArea{
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+#postNotesContent {
+    width: 100px;
+    inline-size: 150px;
+    overflow-wrap: break-word;
+}
+/* Code below was borrowed from W3Schools 
+
+*  Code was used to develop the dropdown menu for order for each month. The code creates a simple dropdown menu when the user hovers over
+*  the name of the month. Then the user can select a new month which will be highlighted in a light yellow color, this will display a new 
+*  month and its data.
+* 
+*  Source Link: https://www.w3schools.com/css/css_dropdowns.asp
+*/
+
+.dropButton { /*Format for the dropdown button itself*/
+    background-color: #ece035;
+    color: black;
+    padding: 10px;
+    font-size: 16px;
+    border: solid 2px black;
+    text-align: center;
+    font-family: 'Roboto Slab', serif;
+    margin-top: -50px;
+  }
+
+.dropdown { /*the drop down list*/
+    position: relative;
+    display: inline-block;
+    left: 123px;
+    top: -3px;
+    padding-top: 8px;
+    font-family: 'Roboto Slab', serif;
+    text-align: center;
+    max-height: 5px;
+    margin-top: -100px;
+    
+}
+
+.dropdown-content { /*the dropdown list*/
+    display:none;
+    position: absolute;
+    background-color: white;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    height: 125px;
+    width: inherit;
+    overflow: auto;
+    text-align: center;
+}
+
+.dropdown-content p { /*single content in the list*/
+color: black;
+padding: 12px 16px;
+text-decoration: none;
+display: block;
+width: 20px;
+text-align: center;
+
+}
+
+p:hover { /*add background color while hovering an element*/
+background-color: #ece035;
+}
+
+.dropdown:hover .dropdown-content { /*add hover style on month list*/
+display: block;
+
+}

@@ -1,0 +1,172 @@
+<!--
+    CS-341 Homework 1
+    Author: Devam Patel
+    Date: 1/20/2022
+
+    Cheesecake Order Form Webpage (HTML File)
+-->
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <!-- Link this HTML doc to CSS doc-->
+        <link rel="stylesheet"type="text/css" href="stylesheets/index.css">
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="javascripts/postOrder.js"></script>
+        <script src = "javascripts/monthlyOrders.js"></script>
+
+        <title>Cheesecake Order Form</title>
+    </head>
+
+    <body>
+        <div class="mainClass">
+            
+            <div id="imageHeader">
+                <!-- Set header name-->
+                <h1 id="mainHeader"> Cheesecake Order Form</h1>
+            
+                <!-- Link cheesecake image using URL-->
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/Mondays_at_Il_Forno_-_Cheesecake_with_strawberry_sauce.jpg/800px-Mondays_at_Il_Forno_-_Cheesecake_with_strawberry_sauce.jpg" width="235" height="220">
+                <br>
+                <br>
+
+            </div>
+                
+                
+            <div id="preOrder">
+                
+                <table>
+                    <tr>
+                        <td>
+                            <label id="quantityID">Quantity <br></label>
+                        </td>
+        
+                        <!-- This was used to create space between Quanity and Topping text-->
+                        <td>
+                            <td>
+                                <td>
+                                    <td>
+                                        <td>
+                                            <td>
+                                                <td>
+        
+                                                </td>
+                                            </td>
+                                        </td>
+                                    </td>
+                                </td>
+                            </td>
+                        </td>
+                        <td>
+                            <label id="ToppingsLabel">Topping</label>
+                        </td>
+                    </tr>
+        
+                    <tr>    
+                        <td>
+                        <!-- Create a drop-down to choose differnt quantities-->
+                            <select id="quantityDropdown">
+                                <option selected="selected" value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                                <option value="7">7</option>
+                                <option value="8">8</option>
+                                <option value="9">9</option>
+                                <option value="10">10</option>
+                            </select>
+                        </td>
+        
+                        <!-- This was used to create space between the drop-down menu and radio buttons-->
+                        <td>
+                            <td>
+                                <td>
+                                    <td>
+                                        <td>
+                                            <td>
+                                                <td>
+        
+                                                </td>
+                                            </td>
+                                        </td>
+                                    </td>
+                                </td>
+                            </td>
+                        </td>
+        
+                        <!-- Create the radio buttons for each of the three toppings-->
+                        <td>
+                            <div class="chooseToppings">
+                                <input name="toppings" type="radio" id="Plain"   checked value="Plain">
+                                <label for="Plain">Plain</label>
+                                <br>
+                                <input name="toppings" type="radio" id="Cherry"  value="Cherry">
+                                <label for="Cherry">Cherry</label>
+                                <br>
+                                <input name="toppings" type="radio" id="Chocolate"  value="Chocolate">
+                                <label for="Chocolate">Chocolate</label>
+                            </div>
+                        </td>  
+                    </tr>
+                </table>
+        
+                <!-- Notes heading for the textarea box-->
+                <label for=Notes id=notesLabel>Notes:</label>
+                <br>
+                <textarea id="textArea" rows="4" cols="50" placeholder="Enter any specific instructions here."></textarea>
+                <br><br>
+                
+                 <!-- Create a button for ordering-->
+                 <button onclick="orderClicked()" id="orderButton">Order</button>
+   
+            
+            </div> 
+
+            <div class="postOrder">
+
+                
+
+                <!-- create and hide all of the labels used in the post order processing summary-->
+                <div id="postLabels" hidden="true">
+                    <label id="thankyouNote" ></label><br><br>
+                    <label id="orderSummary"></label><br>
+                    <label id="list"></label><br><br>
+                    <label id="postNotesTitle"></label><br>
+                    <label id="postNotesContent"></label><br><br><br>
+                </div>
+
+                <!-- Create the dropdown list for the order of the month -->
+                <div id=dropDownID class="dropdown">
+                    <button onclick="newMonthClicked()" id="dropButtonID"  class="dropButton">Jan</button>
+                        <div id="monthsList"  class="dropdown-content">
+                            <p>Jan</p>
+                            <p>Feb</p> 
+                            <p>Mar</p> 
+                            <p>Apr</p> 
+                            <p>May</p> 
+                            <p>Jun</p> 
+                            <p>Jul</p> 
+                            <p>Aug</p> 
+                            <p>Sep</p> 
+                            <p>Oct</p> 
+                            <p>Nov</p> 
+                            <p>Dec</p> 
+                        </div>   
+                </div>
+
+
+                <!-- Create the unordered list of last month's orders-->
+                <h1 style="font-size:1.40rem;" id=totalOrders>Orders For</h1>
+                <ul id="myList">
+                    <li>11 cherry</li>
+                    <li>17 chocolate</li>
+                    <li>31 plain</li>
+                </ul>
+
+            </div>    
+        </div>
+    <body>
+</html>
