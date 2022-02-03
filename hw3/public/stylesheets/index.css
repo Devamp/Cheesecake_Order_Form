@@ -150,6 +150,7 @@ select { /*adjust the margin of the quantity selector*/
 }
 
 #myList{
+    padding-top: 7px;
     margin-top: -10px;
     font-family: 'Roboto Slab', serif;
     font-style: normal;
