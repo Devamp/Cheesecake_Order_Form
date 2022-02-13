@@ -17,13 +17,14 @@ $(function() {
 
    $.post('/orders', convert(this.innerHTML), // url request and the month selected - sent to server
       function(data, status) { // function to execute on success
-         //var toAppend = data[0]["Topping"];
          var dataParsed = JSON.parse(data);
 
+         // format parsed data
          var cherry = dataParsed[2].Topping + " Cheesecakes: " + dataParsed[2].Quantity;
          var chocolate = dataParsed[1].Topping + " Cheesecakes: " + dataParsed[1].Quantity;
          var plain = dataParsed[0].Topping + " Cheesecakes: " + dataParsed[0].Quantity;
 
+         // update list with new data from the database
          $("#cherryDisplay").html(cherry);
          $("#chocolateDisplay").html(chocolate);
          $("#plainDisplay").html(plain);

@@ -1,5 +1,6 @@
 
-/*Additional JavaScript file 
+/*
+  Additional JavaScript file 
   Author: Devam Patel
   Version: 1/27/22
 */
@@ -42,6 +43,10 @@ function orderClicked(){
             placeholder = txt;
         }
         document.getElementById("postNotesContent").innerHTML = placeholder;
+
+        $.post('/neworder', {"Topping": toppingSelected, "Quantity": quantity, "Notes": placeholder}, // send url along with data
+            function(data, status){}
+        );
     }
 }
 
