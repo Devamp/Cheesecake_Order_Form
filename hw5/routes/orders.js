@@ -3,11 +3,12 @@
 * Author: Devam Patel
 * Version: 2/11/22
 *
-* THE ORDER UPDATES ONCE A NEW ORDER IS PLACED, HOWEVER, THE USER HAS THE CLICK ON THE UPDATED MONTH TWICE. 
+* NOTES:
+* Once the order has been placed, the updated month must be clicked twice in order for it to update. This is a small bug which
+* I couldnt solve. Additionaly, I have also left a console.log() (in neworders.js) which shows what month was randomly selected to be updated.
 */
 
 var express = require('express');
-const res = require('express/lib/response');
 const { dbquery } = require('./dbms');
 var router = express.Router();
 
@@ -59,7 +60,7 @@ let MonthData = class {
     let novData = new MonthData(0, 0, 0);
     let decData = new MonthData(0, 0, 0);
 
-    // get query
+    // load initial values from the database
     dbquery("SELECT MONTH AS Month, TOPPING AS Topping, SUM(QUANTITY) AS 'count(*)' FROM ORDERS GROUP BY MONTH, TOPPING", storeResults);
 
     function storeResults(bool, results){
@@ -193,11 +194,11 @@ let MonthData = class {
 /* GET data for orders page. */
 router.get('/', function(req, res, next) {
     res.send("Orders page");
-    
 });
 
-/* POST new data to orders page*/
+/* POST new data to orders page (Read notes on header for additional info) */
 router.post('/', function(req, res, next) {
+    // update the data classes everytime request is given by calling the query
     dbquery("SELECT MONTH AS Month, TOPPING AS Topping, SUM(QUANTITY) AS 'count(*)' FROM ORDERS GROUP BY MONTH, TOPPING", storeResults);
     let toReturn = dispay(req.body.Month); // call helper function to get JSON object
     res.json(toReturn);

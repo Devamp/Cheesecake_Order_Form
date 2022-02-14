@@ -2,10 +2,13 @@
 /* Server side file to maintain the new orders
 * Author: Devam Patel
 * Version: 2/11/22
+*
+* NOTES:
+* Once the order has been placed, the updated month must be clicked twice in order for it to update. This is a small bug which
+* I couldnt solve. Additionaly, I have also left a console.log() which shows what month was randomly selected to be updated.
 */
 
 var express = require('express');
-const res = require('express/lib/response');
 const { Callbacks } = require('jquery');
 const { RANDOM } = require('mysql/lib/PoolSelector');
 const { dbquery } = require('./dbms');

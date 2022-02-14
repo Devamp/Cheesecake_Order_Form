@@ -8,8 +8,7 @@
 function orderClicked(){
 
     document.getElementById("dropDownID").style.display = "inline-block";
-
-
+    
     // store all of the customers order details, including notes, quantity, and topping chosen
     var txt = document.getElementById('textArea').value;
     var quantity = document.getElementById("quantityDropdown").value;
