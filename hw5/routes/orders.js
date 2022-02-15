@@ -4,8 +4,8 @@
 * Version: 2/11/22
 *
 * NOTES:
-* Once the order has been placed, the updated month must be clicked twice in order for it to update. This is a small bug which
-* I couldnt solve. Additionaly, I have also left a console.log() (in neworders.js) which shows what month was randomly selected to be updated.
+* Once the order has been placed, the updated month (JAN) must be clicked twice in order for it to update. This is a small bug which
+* I couldnt solve.
 */
 
 var express = require('express');
@@ -199,9 +199,9 @@ router.get('/', function(req, res, next) {
 /* POST new data to orders page (Read notes on header for additional info) */
 router.post('/', function(req, res, next) {
     // update the data classes everytime request is given by calling the query
-    dbquery("SELECT MONTH AS Month, TOPPING AS Topping, SUM(QUANTITY) AS 'count(*)' FROM ORDERS GROUP BY MONTH, TOPPING", storeResults);
+    dbquery("SELECT MONTH AS Month, TOPPING AS Topping, SUM(QUANTITY) AS 'count(*)' FROM ORDERS GROUP BY MONTH, TOPPING", storeResults); 
     let toReturn = dispay(req.body.Month); // call helper function to get JSON object
-    res.json(toReturn);
+     res.json(toReturn);
 });
 
 // function which returns the corrsponding JSON object to a given month
